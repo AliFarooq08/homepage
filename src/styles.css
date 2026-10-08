@@ -11,7 +11,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body {
+body {  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,41 @@ header {
 .project-title {
     text-align: center;
 }
-
+.white {
+    color: white;
+}
+footer {
+    background-color: green;
+}
+.inverse {
+    filter: invert(1);
+}
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+.center-gap {
+    text-align: center;
+    padding-top: 1vh;
+}
+.footer-item {
+    margin: 0px 16px;
+}
+.prof-w100 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    height: auto;
+}
+.small-svg {
+    width: 32px;
+}
+div:empty {
+    display: none;
+}
 @media (width <= 440px) {
     header {
         align-items: center;
