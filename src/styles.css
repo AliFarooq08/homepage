@@ -36,7 +36,7 @@ header {
 .cards-container {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
     justify-items: center;
 }
@@ -96,7 +96,7 @@ footer {
 div:empty {
     display: none;
 }
-@media (width <= 440px) {
+@media (width < 768px) {
     header {
         align-items: center;
         flex-direction: column;
@@ -133,29 +133,59 @@ div:empty {
         box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
     }
 }
-@media (width <= 1320px) and (width > 440px) {
+@media (width <= 1320px) and (width >= 768px) {
     header {
         flex-direction: row;
+        background: linear-gradient(165deg, #6E855B 65%, white 65%);
+        padding: 32px 64px;
+        width: 100vw;
     }
     .main-image {
-        position: relative;
-        width: 120%;
-        height: 352px;
+        width: 30vw;
+        position: absolute;
+        z-index: 1;
     }
     .main-title {
         position: absolute;
-        top: 280px;
-        left: 40px;
+        left: 30vw;
+        font-size: 2.5rem;
+        z-index: 2;
     }
     .header-card {
+        z-index: 0;
+        position: relative;
         box-shadow: 2px 2px 4px 2px gray;
+        background-color: white;
+        padding-left: 7.5vw;
+        padding-top: 10px;
+        padding-right: 60px;
+        width: 45vw;
+        height: 300px;
+        top: 50px;
+        left: 25vw;
     }
-
-
+    .small-svg {
+        z-index: 3;
+    }
+    .prof-icons {
+        position: absolute;
+        top: 325px;
+        left: 60vw;
+        margin-top: 16px;
+        width: 12.5vw;
+        gap: 8px;
+    }
+    .project-card {
+        width: 85%;
+        text-align: center;
+        box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
+        
+    }
 }
 @media (width > 1920px){
     header {
         flex-direction: row;
+        
     }
     .main-title {
         position: absolute;
