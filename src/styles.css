@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5vh;
+    height: fit-content;
 }
 header {
     display: flex;
@@ -70,12 +71,6 @@ footer {
 .inverse {
     filter: invert(1);
 }
-.gap {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: center;
-}
 .center-gap {
     text-align: center;
     padding-top: 1vh;
@@ -84,7 +79,7 @@ footer {
     margin: 0px 16px;
 }
 .prof-w100 {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -96,6 +91,20 @@ footer {
 div:empty {
     display: none;
 }
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+.end-image {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+.flex {
+    display: flex;
+}
 @media (width < 768px) {
     header {
         align-items: center;
@@ -105,7 +114,7 @@ div:empty {
         width: 100vw;
         position: relative;
         margin-bottom: 8px;
-        background: linear-gradient(155deg, #6E855B 65%, white 65%);
+        background: linear-gradient(155deg, green 65%, white 65%);
         padding: 16px;
     }
     .main-title {
@@ -132,11 +141,14 @@ div:empty {
         text-align: center;
         box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
     }
+    .flex {
+        flex-direction: column;
+    }
 }
 @media (width <= 1320px) and (width >= 768px) {
     header {
         flex-direction: row;
-        background: linear-gradient(165deg, #6E855B 65%, white 65%);
+        background: linear-gradient(165deg, green 65%, white 65%);
         padding: 32px 64px;
         width: 100vw;
     }
@@ -180,6 +192,18 @@ div:empty {
         text-align: center;
         box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
         
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+    .end-image {
+        width: 320px;
+    }
+    .gap {
+        width: calc(100% - 320px);
     }
 }
 @media (width > 1920px){
