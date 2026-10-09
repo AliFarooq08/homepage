@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap);
+@font-face {
+    font-family: "Mario";
+    src: url(727519250ea444b6c5ce.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: "Silkscreen", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+header {
+    display: flex;
+}
+.mario-white {
+    font-family: "Mario", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.mario-black {
+    text-align: center;
+    font-family: "Mario", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.prof-icons {
+    display: flex;
+    flex-direction: row;
+}
+.cards-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+.project-top {
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    margin: 0px 16px;
+    align-items: center;
+}
+.project-image {
+    width: 100%;
+    height: auto;
+    background-color: orange;
+}
+.project-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+}
+.project-title {
+    text-align: center;
+}
+.white {
+    color: white;
+}
+.inverse {
+    filter: invert(1);
+}
+.center-gap {
+    text-align: center;
+    padding-top: 1vh;
+}
+.footer-item {
+    margin: 0px 16px;
+}
+.prof-w100 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.small-svg {
+    width: 32px;
+}
+div:empty {
+    display: none;
+}
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+.end-image {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+.flex {
+    display: flex;
+}
+footer {
+    background-color: green;
+}
+@media (width < 768px) {
+    header {
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-image {
+        width: 100vw;
+        position: relative;
+        margin-bottom: 8px;
+        background: linear-gradient(155deg, green 65%, white 65%);
+        padding: 16px;
+    }
+    .main-title {
+        position: absolute;
+        top: calc(80vw + 20px);
+        text-align: center;
+    }
+    .header-card {
+        padding: 0px 8px;
+    }
+    .mario-black {
+        margin-bottom: 8px;
+    }
+    .prof-icons {
+        margin-top: 16px;
+        width: 20vw;
+        gap: 8px;
+    }
+    .project-github, .open-in-new {
+        width: 24px;
+    }
+    .project-card {
+        width: 80%;
+        text-align: center;
+        box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
+    }
+    .flex {
+        flex-direction: column;
+    }
+}
+@media (width <= 1320px) and (width >= 768px) {
+    header {
+        flex-direction: row;
+        background: linear-gradient(165deg, green 65%, white 65%);
+        padding: 32px 64px;
+        width: 100vw;
+    }
+    .main-image {
+        width: 30vw;
+        position: absolute;
+        z-index: 1;
+    }
+    .main-title {
+        position: absolute;
+        left: 30vw;
+        font-size: 2.5rem;
+        z-index: 2;
+    }
+    .header-card {
+        z-index: 0;
+        position: relative;
+        box-shadow: 2px 2px 4px 2px gray;
+        background-color: white;
+        padding-left: 7.5vw;
+        padding-top: 10px;
+        padding-right: 60px;
+        width: 45vw;
+        height: 300px;
+        top: 50px;
+        left: 25vw;
+    }
+    .small-svg {
+        z-index: 3;
+    }
+    .prof-icons {
+        position: absolute;
+        top: 325px;
+        left: 60vw;
+        margin-top: 16px;
+        width: 12.5vw;
+        gap: 8px;
+    }
+    .project-card {
+        width: 85%;
+        text-align: center;
+        box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.534);
+        
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+    .end-image {
+        width: 320px;
+    }
+    .gap {
+        width: calc(100% - 320px);
+    }
+}
+@media (width > 1024px){
+    header {
+        flex-direction: row;
+        gap: 16px;
+        background: linear-gradient(165deg, green 65%, white 65%);
+        padding: 32px 64px;
+        width: 100vw;
+        height: 70vh;
+    }
+    .main-image {
+        width: 30vw;
+    }
+    .main-title {
+        position: absolute;
+        left: 10vw;
+        top: 30vw;
+        font-size: 2.5rem;
+    }
+    .header-card {
+        box-shadow: 2px 2px 4px 2px gray;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 18vw;
+        padding: 32px 32px;
+        padding-bottom: 64px;
+        margin-left: 100px;
+    }
+    .prof-icons {
+        position: absolute;
+        left: 75vw;
+        top: 17.5vw;
+        width: 10vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    .end-image {
+        width: 60vw;
+    }
+    .gap {
+        width: 40vw;
+    }
+    footer {
+        padding: 5vw 5vw;
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    .project-card {
+        width: 80%;
+    }
+
+
+}
+
+/*# sourceMappingURL=main.04edeca18f1bf4f77051.css.map*/
