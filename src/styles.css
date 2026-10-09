@@ -11,13 +11,15 @@
     padding: 0px;
     box-sizing: border-box;
 }
+html {
+    height: 100%;
+}
 body {  
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5vh;
-    height: fit-content;
 }
 header {
     display: flex;
@@ -65,9 +67,6 @@ header {
 .white {
     color: white;
 }
-footer {
-    background-color: green;
-}
 .inverse {
     filter: invert(1);
 }
@@ -83,7 +82,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 12px;
-    height: auto;
 }
 .small-svg {
     width: 32px;
@@ -104,6 +102,9 @@ div:empty {
 }
 .flex {
     display: flex;
+}
+footer {
+    background-color: green;
 }
 @media (width < 768px) {
     header {
@@ -196,7 +197,6 @@ div:empty {
     footer {
         display: flex;
         flex-direction: row;
-        width: 100%;
         height: auto;
     }
     .end-image {
@@ -206,16 +206,61 @@ div:empty {
         width: calc(100% - 320px);
     }
 }
-@media (width > 1920px){
+@media (width > 1024px){
     header {
         flex-direction: row;
-        
+        gap: 16px;
+        background: linear-gradient(165deg, green 65%, white 65%);
+        padding: 32px 64px;
+        width: 100vw;
+        height: 70vh;
+    }
+    .main-image {
+        width: 30vw;
     }
     .main-title {
         position: absolute;
+        left: 10vw;
+        top: 30vw;
+        font-size: 2.5rem;
     }
     .header-card {
         box-shadow: 2px 2px 4px 2px gray;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 18vw;
+        padding: 32px 32px;
+        padding-bottom: 64px;
+        margin-left: 100px;
     }
+    .prof-icons {
+        position: absolute;
+        left: 75vw;
+        top: 17.5vw;
+        width: 10vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    .end-image {
+        width: 60vw;
+    }
+    .gap {
+        width: 40vw;
+    }
+    footer {
+        padding: 5vw 5vw;
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    .project-card {
+        width: 80%;
+    }
+
 
 }

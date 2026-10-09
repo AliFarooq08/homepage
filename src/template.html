@@ -10,7 +10,7 @@
       <img
         class="main-image"
         srcset="./assets/luigi-slim.png, ./assets/luigi-wide.png"
-        sizes="(width <= 440px) 280px, 664px"
+        sizes="(max-width = 440px) 280px, 664px"
 
         src="./assets/luigi-wide.png"
         alt="Luigi picture 1"
@@ -155,14 +155,11 @@
             <svg class="twitter inverse small-svg" viewBox="0 0 128 128"><path d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z" fill="#000"></path></svg>
         </div>
       </div>
-      <img
-        class="end-image"
-        srcset="./assets/luigismws-slim.png, ./assets/luigismws-wide.png"
-        sizes="(width < 1024) 320px, 1024px"
-
-        src="./assets/luigi-wide.png"
-        alt="Luigi picture 1"
-      />
+      <picture class="end-image">
+        <source media="(min-width: 1025px)" srcset="./assets/luigismws-wide.png">
+        <source media="(max-width: 1024px)" srcset="./assets/luigismws-slim.png">
+        <img class="end-image" src="./assets/luigismws-slim.png" alt="Luigi picture 2">
+      </picture>
     </footer>
   </body>
 </html>
